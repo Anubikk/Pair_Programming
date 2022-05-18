@@ -28,7 +28,21 @@ console.log(andSelect(['ants', 'APPLES', 'ART', 'BACON', 'arm'], isUpperCase,  s
 
 *******************************************************************************/
 
-let andSelect = function() {
+let andSelect = function(array, cb, cb2) {
+    //return a new array containing the ele that pass true in both callbacks
+    let newarray = [];
+    //create an empty array
+    for (let i = 0; i < array.length; i++) {
+        let ele = array[i];
+        if ((cb(ele)===true) && (cb2(ele)===true)) {
+            newarray.push(ele);
+        }
+    }
+    return newarray;
+    //iterate through the original array
+    //return a true boolean if the elements pass true in both call backs
+    //if true push new elements to new array
+    //return new array
 
 };
 

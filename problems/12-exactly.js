@@ -27,7 +27,20 @@ console.log(result4); // true
 
 *******************************************************************************/
 
-let exactly = function() {
+let exactly = function(array, num, cb) {
+    //return a boolean if the number of elements that return true is = num
+    //create a count var
+    let count = 0;
+    //iterate through the array
+    for (let i = 0; i < array.length; i++) {
+        let ele = array[i];
+        if (cb(ele)===true) {
+            count++;
+        }
+    }
+    return count===num;
+    //pass each ele into the boolean if true and increase count
+    //if count is = num element return true otherwise return false
 
 };
 

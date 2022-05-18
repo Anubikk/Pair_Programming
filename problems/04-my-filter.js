@@ -22,7 +22,7 @@ console.log(result2);      // ['choose', 'words', 'only']
 let myFilter = function(array, cb) {
     let newArr = [];
     array.forEach(function(ele, i){
-       if (cb(ele)){
+       if (cb(ele,i)){
            newArr.push(ele)
        }
     });
