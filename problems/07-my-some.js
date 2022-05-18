@@ -23,11 +23,23 @@ let result3 = mySome(['soup', 'noodles', 'bike', 'ship'], function(ele) {
 console.log(result3);   // true
 *******************************************************************************/
 
-let mySome = function() {
+let mySome = function(array,cb) {
+    //iterate through the array
+    for (let i=0; i< array.length; i++) {
+        let ele = array[i];
+    // check to see if any elements are true when passed through the callback
+    if (cb(ele,i)) {
+          // if so, return true
+        return true
+    }
+    };
 
-};
+
+       //otherwise return false
+    return false;
 
 
+}
 
 
 

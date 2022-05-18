@@ -42,11 +42,23 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - How many times are you calling each callback function?
 *******************************************************************************/
 
-let selectiveMap = function() {
+let selectiveMap = function(array, cb, cb2) {
+    // create an empty array
+    let newarray = [];
+    // put element through first callback function - test to see if true
+        // if true, put element through the second callback function and have result push into new array
+    array.forEach(function(ele){
+        if (cb(ele) === true) {
+            newarray.push(cb2(ele));
+        }
+            // otherwise, push element into new array
+            else { newarray.push(ele); }
 
+    })
+
+    // return the new array
+    return newarray;
 };
-
-
 
 
 
