@@ -17,9 +17,15 @@ mapMutator(arr2, function (el, i) {
 });
 console.log(arr2); // [ 0, 9, 20 ]
 *******************************************************************************/
-
-let mapMutator = function() {
-
+//return original array, mutated by passing each element within through the callback
+//iterate through the array
+//overwrite the value in the array with the result of running that value through the callback function
+//return mutated array
+let mapMutator = function(array,cb) {
+for (let i=0; i < array.length; i++) {
+    array[i] = cb(array[i],i);
+}
+return array;
 };
 
 
